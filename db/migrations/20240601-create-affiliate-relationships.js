@@ -1,0 +1,38 @@
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.createTable('affiliate_relationships', {
+      id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true,
+        allowNull: false,
+      },
+      referrer_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      referred_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      level: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        defaultValue: 1,
+      },
+      created_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      updated_at: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+    });
+  },
+  down: async (queryInterface) => {
+    await queryInterface.dropTable('affiliate_relationships');
+  },
+}; 

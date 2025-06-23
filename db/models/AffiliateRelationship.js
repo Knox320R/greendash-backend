@@ -2,21 +2,21 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../../config/database');
 
 /**
- * ReferralBonus Model
- * Tracks bonuses paid out to referrers in the affiliate system.
+ * AffiliateRelationship Model
+ * Represents a referral/affiliate connection between two users.
+ * Used to build the multi-level affiliate network.
  *
  * Example:
  * {
  *   id: 1,
- *   user_id: 2, // Referrer (FK to users)
- *   referred_user_id: 3, // The user who triggered the bonus (FK to users)
- *   level: 1, // Level in the affiliate tree
- *   amount: 2.50, // Bonus amount
+ *   referrer_id: 2, // User who referred
+ *   referred_id: 3, // User who was referred
+ *   level: 1, // 1 = direct, 2 = indirect, etc.
  *   created_at: '2024-06-01T12:00:00Z',
  *   updated_at: '2024-06-01T12:00:00Z'
  * }
  */
-const ReferralBonus = sequelize.define('ReferralBonus', {
+const AffiliateRelationship = sequelize.define('AffiliateRelationship', {
   /**
    * Auto-incrementing primary key
    * Example: 1
@@ -30,15 +30,15 @@ const ReferralBonus = sequelize.define('ReferralBonus', {
    * Referrer's user ID (FK to users)
    * Example: 2
    */
-  user_id: {
+  referrer_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
   /**
-   * The user who triggered the bonus (FK to users)
+   * Referred user's user ID (FK to users)
    * Example: 3
    */
-  referred_user_id: {
+  referred_id: {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
@@ -49,18 +49,11 @@ const ReferralBonus = sequelize.define('ReferralBonus', {
   level: {
     type: DataTypes.INTEGER,
     allowNull: false,
-  },
-  /**
-   * Bonus amount
-   * Example: 2.50
-   */
-  amount: {
-    type: DataTypes.DECIMAL(18, 8),
-    allowNull: false,
+    defaultValue: 1,
   },
 }, {
   timestamps: true,
-  tableName: 'referral_bonuses',
+  tableName: 'affiliate_relationships',
 });
 
-module.exports = ReferralBonus; 
+module.exports = AffiliateRelationship; 
