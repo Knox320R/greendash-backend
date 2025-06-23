@@ -3,7 +3,7 @@ module.exports = {
     await queryInterface.bulkInsert('admin_settings', [
       {
         key: 'TOKEN_DAILY_RATE',
-        value: '0.0005',
+        value: '0.005',
         created_at: new Date(),
         updated_at: new Date(),
       },
