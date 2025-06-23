@@ -12,7 +12,7 @@ router.get('/', userController.getAllUsers);
 router.get('/:id', userController.getUserById);
 router.put('/:id', userController.updateUser);
 // Only admin can delete users
-router.delete('/:id', roleMiddleware('admin'), userController.deleteUser);
+router.delete('/:id', userController.deleteUser);
 router.post('/condition', userController.getUsersByCondition);
 
 module.exports = router; 

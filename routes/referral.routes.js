@@ -10,7 +10,7 @@ router.use(authMiddleware);
 router.post('/', referralController.createAffiliate);
 router.get('/', referralController.getAllAffiliates);
 router.get('/:id', referralController.getAffiliateById);
-router.put('/:id', referralController.updateAffiliate);
+router.put('/:id', roleMiddleware('asmin'), referralController.updateAffiliate);
 // Only admin can delete affiliate relationships
 router.delete('/:id', roleMiddleware('admin'), referralController.deleteAffiliate);
 router.post('/condition', referralController.getAffiliatesByCondition);
