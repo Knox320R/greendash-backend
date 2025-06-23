@@ -8,5 +8,6 @@ router.use('/staking', require('./staking.routes'));
 router.use('/referral', require('./referral.routes'));
 router.use('/orders', require('./order.routes'));
 router.use('/dashboard', require('./dashboard.routes'));
+router.use('/token', require('./token.routes'));
 
 module.exports = router; 
