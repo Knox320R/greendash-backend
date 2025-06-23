@@ -12,8 +12,8 @@ module.exports = {
         wallet_address: null,
         referral_code: 'ADMIN001',
         role: 'admin',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },

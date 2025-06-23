@@ -5,8 +5,8 @@ module.exports = {
         user_id: 2, // Alice
         action: 'stake_created',
         details: JSON.stringify({ amount: 200, package: 'Bronze' }),
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },

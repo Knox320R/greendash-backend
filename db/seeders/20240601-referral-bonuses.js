@@ -6,8 +6,8 @@ module.exports = {
         referred_user_id: 2, // Alice
         level: 1,
         amount: 5,
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },

@@ -6,8 +6,8 @@ module.exports = {
         type: 'purchase',
         amount: 1000,
         related_id: 1, // order id
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },

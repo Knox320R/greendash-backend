@@ -7,8 +7,8 @@ module.exports = {
         tokens_requested: 1000,
         payment_method: 'stripe',
         status: 'approved',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },

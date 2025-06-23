@@ -11,8 +11,8 @@ module.exports = {
         wallet_address: null,
         referral_code: 'ALICE001',
         role: 'user',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
       {
         name: 'Bob',
@@ -22,8 +22,8 @@ module.exports = {
         wallet_address: null,
         referral_code: 'BOB001',
         role: 'user',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ];
     await queryInterface.bulkInsert('users', users);

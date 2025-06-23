@@ -8,8 +8,8 @@ module.exports = {
         start_date: new Date('2024-06-01T12:00:00Z'),
         end_date: new Date('2025-06-01T12:00:00Z'),
         status: 'active',
-        created_at: new Date(),
-        updated_at: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
       },
     ]);
   },
