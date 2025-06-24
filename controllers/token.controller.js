@@ -38,7 +38,7 @@ exports.deleteTransaction = async (req, res, next) => {
     await tx.destroy();
     res.json({ message: 'Transaction deleted' });
   } catch (err) { next(err); }
-};
+}; 
 
 exports.getTransactionsByCondition = async (req, res, next) => {
   try {
@@ -46,7 +46,7 @@ exports.getTransactionsByCondition = async (req, res, next) => {
     if (!condition || typeof condition !== 'object') {
       return res.status(400).json({ error: 'Invalid or missing condition object' });
     }
-    const txs = await TokenTransaction.findAll({ where: condition });
-    res.json(txs);
+    const transactions = await TokenTransaction.findAll({ where: condition });
+    res.json(transactions);
   } catch (err) { next(err); }
 }; 
