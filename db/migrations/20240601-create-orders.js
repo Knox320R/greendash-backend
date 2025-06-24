@@ -18,11 +18,11 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       amount_paid: {
-        type: Sequelize.DECIMAL(18, 8),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       tokens_requested: {
-        type: Sequelize.DECIMAL(18, 8),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       payment_method: {

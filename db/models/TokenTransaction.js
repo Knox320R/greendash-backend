@@ -47,7 +47,7 @@ const TokenTransaction = sequelize.define('TokenTransaction', {
    * Example: 5.00
    */
   amount: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**

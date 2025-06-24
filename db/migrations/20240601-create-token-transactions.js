@@ -22,7 +22,7 @@ module.exports = {
         allowNull: false,
       },
       amount: {
-        type: Sequelize.DECIMAL(18, 8),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       related_id: {

@@ -55,7 +55,7 @@ const ReferralBonus = sequelize.define('ReferralBonus', {
    * Example: 2.50
    */
   amount: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
 }, {

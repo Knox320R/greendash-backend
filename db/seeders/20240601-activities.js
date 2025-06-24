@@ -2,7 +2,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert('activities', [
       {
-        user_id: 2, // Alice
+        user_id: 2,
         action: 'stake_created',
         details: JSON.stringify({ amount: 200, package: 'Bronze' }),
         createdAt: new Date(),

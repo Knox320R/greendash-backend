@@ -49,7 +49,7 @@ const StakingPosition = sequelize.define('StakingPosition', {
    * Example: 1000
    */
   amount: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**

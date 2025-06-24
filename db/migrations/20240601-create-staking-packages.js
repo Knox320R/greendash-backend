@@ -11,16 +11,32 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      price: {
+        type: Sequelize.DOUBLE,
+        allowNull: false
+      },
+      total_amount: {
+        type: Sequelize.DOUBLE,
+        allowNull: false
+      },
+      remained: {
+        type: Sequelize.DOUBLE,
+        allowNull: false
+      },
+      affiliate_bonus: {
+        type: Sequelize.DOUBLE,
+        allowNull: false
+      },
       min_amount: {
-        type: Sequelize.DECIMAL(18, 8),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       max_amount: {
-        type: Sequelize.DECIMAL(18, 8),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       daily_return_rate: {
-        type: Sequelize.DECIMAL(5, 4),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       lock_period_days: {

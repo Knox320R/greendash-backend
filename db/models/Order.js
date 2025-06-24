@@ -40,7 +40,7 @@ const Order = sequelize.define('Order', {
    * Example: 100.00
    */
   amount_paid: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**
@@ -48,7 +48,7 @@ const Order = sequelize.define('Order', {
    * Example: 1000
    */
   tokens_requested: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**

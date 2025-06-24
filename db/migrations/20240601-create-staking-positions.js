@@ -28,7 +28,7 @@ module.exports = {
         onDelete: 'CASCADE',
       },
       amount: {
-        type: Sequelize.DECIMAL(18, 8),
+        type: Sequelize.DOUBLE,
         allowNull: false,
       },
       start_date: {

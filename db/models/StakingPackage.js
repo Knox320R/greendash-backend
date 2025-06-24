@@ -40,7 +40,7 @@ const StakingPackage = sequelize.define('StakingPackage', {
    * Example: 100
    */
   min_amount: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**
@@ -48,7 +48,7 @@ const StakingPackage = sequelize.define('StakingPackage', {
    * Example: 999
    */
   max_amount: {
-    type: DataTypes.DECIMAL(18, 8),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**
@@ -56,7 +56,7 @@ const StakingPackage = sequelize.define('StakingPackage', {
    * Example: 0.0005
    */
   daily_return_rate: {
-    type: DataTypes.DECIMAL(5, 4),
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
   /**
@@ -65,6 +65,38 @@ const StakingPackage = sequelize.define('StakingPackage', {
    */
   lock_period_days: {
     type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  /**
+   * Price of the staking package
+   * Example: 100.00
+   */
+  price: {
+    type: DataTypes.DOUBLE,
+    allowNull: false,
+  },
+  /**
+   * Total amount available in the package
+   * Example: 10000
+   */
+  total_amount: {
+    type: DataTypes.DOUBLE,
+    allowNull: false,
+  },
+  /**
+   * Remaining amount in the package
+   * Example: 5000
+   */
+  remained: {
+    type: DataTypes.DOUBLE,
+    allowNull: false,
+  },
+  /**
+   * Affiliate bonus for this package
+   * Example: 10.00
+   */
+  affiliate_bonus: {
+    type: DataTypes.DOUBLE,
     allowNull: false,
   },
 }, {
