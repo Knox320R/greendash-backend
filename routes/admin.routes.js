@@ -9,5 +9,6 @@ router.get('/', adminController.getAllSettings);
 router.get('/:id', adminController.getSettingById);
 router.put('/:id', authMiddleware, roleMiddleware("admin"), adminController.updateSetting);
 router.delete('/:id', authMiddleware, roleMiddleware("admin"), adminController.deleteSetting);
+router.post('/message', adminController.sendMessageToAdmin);
 
 module.exports = router; 

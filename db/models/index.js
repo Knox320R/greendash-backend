@@ -10,6 +10,8 @@ const TokenTransaction = require('./TokenTransaction');
 const ReferralBonus = require('./ReferralBonus');
 const Activity = require('./Activity');
 const AdminSettings = require('./AdminSettings');
+const Testimonial = require('./Testimonial');
+const PendingUser = require('./PendingUser');
 
 // -------------------
 // Model Associations
@@ -61,4 +63,7 @@ module.exports = {
   TokenTransaction,
   ReferralBonus,
   AdminSettings,
+  Activity,
+  Testimonial,
+  PendingUser
 }; 

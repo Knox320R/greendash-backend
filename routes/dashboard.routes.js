@@ -5,14 +5,14 @@ const authMiddleware = require('../middlewares/authMiddleware');
 const roleMiddleware = require('../middlewares/roleMiddleware');
 
 // All routes require authentication
-router.use(authMiddleware);
+// router.use(authMiddleware);
 
 // Only admin can access activity log and stats
-router.post('/activity', dashboardController.createActivity);
-router.get('/activity', dashboardController.getAllActivities);
-router.get('/activity/:id', dashboardController.getActivityById);
-router.put('/activity/:id', dashboardController.updateActivity);
-router.delete('/activity/:id', dashboardController.deleteActivity);
+router.post('/', dashboardController.createActivity);
+router.get('/', dashboardController.getAllActivities);
+router.get('/:id', dashboardController.getActivityById);
+router.put('/:id', dashboardController.updateActivity);
+router.delete('/:id', dashboardController.deleteActivity);
 router.get('/stats', dashboardController.getStats);
 
 module.exports = router; 
